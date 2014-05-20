@@ -1,17 +1,17 @@
 ## install multi package
-package {'cron': ensure => installed}
-package {'lsof': ensure => installed}
-package {'sudo': ensure => installed}
+#package {'nginx': ensure => installed}
+#package {'lsof': ensure => installed}
+#package {'sudo': ensure => installed}
 
-package {['cron', 'lsof', 'sudo']:
+package {['nginx', 'lsof', 'sudo']:
     ensure => installed,
 }
 
 ## mkdir directory tree
 file {['/tmp/', '/tmp/dir1/', '/tmp/dir1/dir2']:
     ensure => 'directory',
-    owner  => 'test',
-    group  => 'test',
+    owner  => 'vagrant',
+    group  => 'vagrant',
     mode   => 750,
 }
 
@@ -27,13 +27,13 @@ define print_obj {
 print_obj { $list:; }
 
 #string split into array
-$array_in = "cron sudo nginx"
+$array_in = "aa bb cc"
 $array_out = split($array_in, ' ')
 print_obj { $array_out:; }
 print_obj { $array_in:; }
 
 #regex split
-$array_in = "cron:sudo,nginx"
-$array_out = split($array_in, ':|,')
-print_obj { $array_out:; }
-print_obj { $array_in:; }
+$array_regex_in = "ab:bc,cd"
+$array_regex_out = split($array_regex_in, ':|,')
+print_obj { $array_regex_out:; }
+print_obj { $array_regex_in:; }

@@ -1,0 +1,33 @@
+#$sudo puppet apply manifests/arrays.pp
+notice: Scope(Class[main]): a
+notice: Scope(Class[main]): e
+notice: Found object ab:bc,cd
+notice: /Stage[main]//Print_obj[ab:bc,cd]/Notify[Found object ab:bc,cd]/message: defined 'message' as 'Found object ab:bc,cd'
+notice: Found object ab
+notice: /Stage[main]//Print_obj[ab]/Notify[Found object ab]/message: defined 'message' as 'Found object ab'
+notice: Found object a
+notice: /Stage[main]//Print_obj[a]/Notify[Found object a]/message: defined 'message' as 'Found object a'
+notice: /Stage[main]//Package[lsof]/ensure: created
+notice: /Stage[main]//File[/tmp/dir1/]/ensure: created
+notice: /Stage[main]//File[/tmp/dir1/dir2]/ensure: created
+notice: Found object aa bb cc
+notice: /Stage[main]//Print_obj[aa bb cc]/Notify[Found object aa bb cc]/message: defined 'message' as 'Found object aa bb cc'
+notice: Found object e
+notice: /Stage[main]//Print_obj[e]/Notify[Found object e]/message: defined 'message' as 'Found object e'
+notice: Found object cc
+notice: /Stage[main]//Print_obj[cc]/Notify[Found object cc]/message: defined 'message' as 'Found object cc'
+notice: Found object d
+notice: /Stage[main]//Print_obj[d]/Notify[Found object d]/message: defined 'message' as 'Found object d'
+notice: Found object cd
+notice: /Stage[main]//Print_obj[cd]/Notify[Found object cd]/message: defined 'message' as 'Found object cd'
+notice: Found object bc
+notice: /Stage[main]//Print_obj[bc]/Notify[Found object bc]/message: defined 'message' as 'Found object bc'
+notice: Found object bb
+notice: /Stage[main]//Print_obj[bb]/Notify[Found object bb]/message: defined 'message' as 'Found object bb'
+notice: Found object b
+notice: /Stage[main]//Print_obj[b]/Notify[Found object b]/message: defined 'message' as 'Found object b'
+notice: Found object c
+notice: /Stage[main]//Print_obj[c]/Notify[Found object c]/message: defined 'message' as 'Found object c'
+notice: Found object aa
+notice: /Stage[main]//Print_obj[aa]/Notify[Found object aa]/message: defined 'message' as 'Found object aa'
+notice: Finished catalog run in 11.39 seconds
